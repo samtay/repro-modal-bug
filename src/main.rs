@@ -101,7 +101,7 @@ pub fn Modal(props: ModalProps) -> Element {
                 "invisible z-[-1] opacity-0 backdrop-blur-none"
             },
             onclick: move |e| {
-                // tracing::debug!("Modal background pressed; dismissing!");
+                tracing::debug!("Modal background pressed; dismissing!");
                 on_dismiss_handler(e);
             },
             div {
@@ -111,7 +111,7 @@ pub fn Modal(props: ModalProps) -> Element {
                 },
                 onclick: |e| {
                     // Don't close modal when interacting with its content
-                    // tracing::debug!("Modal content click event; stopping propagation!");
+                    tracing::debug!("Modal content click event; stopping propagation!");
                     e.stop_propagation();
                 },
                 button {
@@ -122,7 +122,7 @@ pub fn Modal(props: ModalProps) -> Element {
                         "invisible"
                     },
                     onclick: move |e| {
-                        // tracing::debug!("Modal button pressed; dismissing!");
+                        tracing::debug!("Modal button pressed; dismissing!");
                         on_dismiss_handler(e);
                     },
                     svg {
